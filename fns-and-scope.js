@@ -14,6 +14,7 @@ function isTyler(name) {
 
 
 
+
 //Code Here
 
 //////////////////PROBLEM 2////////////////////
@@ -97,7 +98,7 @@ var newMyName = myName;
 
 //Now alert the result of invoking newMyName
 
-alert(newMyName);
+alert(newMyName());
 
 //////////////////PROBLEM 7////////////////////
 
@@ -105,14 +106,22 @@ alert(newMyName);
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
+//Code Here
 
-  function outerFn() {
-    
+function outerFn() {
+  return function () {
+    return "Nicholas";
   }
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
+//Code Here
+
+var innerFn = outerFn();
 
 //Now invoke innerFn.
+
+innerFn();
+
+
